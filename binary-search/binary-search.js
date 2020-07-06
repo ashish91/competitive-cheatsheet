@@ -2,7 +2,7 @@
 // O(log(N))
 function binarySearch(arr, begin, end, target) {
   while (begin < end) {
-    let mid = parseInt((begin + end)/2);
+    let mid = parseInt(begin + (end - begin)/2);
 
     if(arr[mid] == target) {
       return mid;
@@ -23,7 +23,7 @@ function binarySearch(arr, begin, end, target) {
     return -1;
   }
 
-  let mid = parseInt((begin + end)/2);
+  let mid = parseInt(begin + (end - begin)/2);
   if (arr[mid] == target) {
     return mid;
   } else if (arr[mid] < target) {
